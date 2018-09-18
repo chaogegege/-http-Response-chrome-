@@ -1,0 +1,19 @@
+{
+  "name": "修改HTTTP请求Response",
+  "version": "1.1",
+  "description": "HTTTP请求Response修改",
+  "content_scripts" : [{
+        "all_frames": true,
+        "run_at":"document_start",
+        "matches": [ "http://*/*","https://*/*"],
+         "js" : ["jquery.min.js","content_script.js"]
+    }
+  ],  
+  "permissions": [
+    "webRequest",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "web_accessible_resources": ["xml.js"],
+   "manifest_version": 2
+}
